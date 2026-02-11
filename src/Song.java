@@ -9,5 +9,8 @@ public class Song {
         this.length = length;
     }
 
-    
+    public String toString(){
+        String dataString = "{ Title :"+title+", Artist: "+artist+",Length: "+length+ " }";
+        return dataString;
+    }
 }
