@@ -9,4 +9,17 @@ public class DLNode {
         next=null;
         data=null;
     }
+
+    public DLNode getPrevious(){
+        return previous;
+    }
+
+    public DLNode getNext(){
+        return next;
+    }
+
+    public Song getData(){
+        return data;
+    }
+    
 }
