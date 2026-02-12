@@ -16,6 +16,12 @@ public class SLNode {
         return data;
     }
 
-    
+    public void setNext(SLNode newNext){
+        next = newNext;
+    }
+
+    public void setData(Song newSong){
+        data = newSong;
+    }
 
 }
