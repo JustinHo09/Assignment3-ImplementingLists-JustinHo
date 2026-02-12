@@ -21,5 +21,17 @@ public class DLNode {
     public Song getData(){
         return data;
     }
-    
+
+    public void setPrevious(DLNode newPrevious){
+        previous = newPrevious;
+    }
+
+    public void setNext(DLNode newNext){
+        next = newNext;
+    }
+
+    public void setData(Song newData){
+        data = newData;
+    }
+
 }
