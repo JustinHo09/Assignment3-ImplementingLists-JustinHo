@@ -10,6 +10,23 @@ public class AList {
         ABList = new Song[maxSize];
     }
 
-    
+    public void addy(Song p){
+        if(size == maxSize){
+            ABList = resize(ABList);
+        }
+        ABList[size] = p;
+        size++;
+
+    }
+
+    public Song[] resize(Song[] original){
+        Song[] resizedList = new Song[maxSize*2];
+        for(int i = 0; i<original.length;i++){
+            resizedList[i] = original[i];
+        }
+        return resizedList;
+    }
+
+
 
 }
