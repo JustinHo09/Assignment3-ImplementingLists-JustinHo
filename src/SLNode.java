@@ -8,5 +8,14 @@ public class SLNode {
         next=null;
     }
 
+    public SLNode getNext(){
+        return next;
+    }
+
+    public Song getData(){
+        return data;
+    }
+
+    
 
 }
