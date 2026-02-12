@@ -39,4 +39,15 @@ public class SLList {
             System.out.println("Not a valid position");
         }
     }
+
+    public String toString(){
+        SLNode current = head;
+        String output= "";
+        while(current!= null){
+            output = output + current.getData().toString();
+            current = current.getNext();
+        }
+
+        return output;
+    }
 }
