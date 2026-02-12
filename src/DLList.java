@@ -51,4 +51,14 @@ public class DLList {
             }
         }
     }
+
+    public String toString(){
+        String output="";
+        DLNode current=head;
+        while(current!=null){
+            output = output+ current.getData().toString()+" \n";
+            current= current.getNext();
+        }
+        return output;
+    }
 }
