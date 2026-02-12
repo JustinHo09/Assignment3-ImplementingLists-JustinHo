@@ -44,7 +44,7 @@ public class SLList {
         SLNode current = head;
         String output= "";
         while(current!= null){
-            output = output + current.getData().toString();
+            output = output + current.getData().toString()+"\n";
             current = current.getNext();
         }
 
