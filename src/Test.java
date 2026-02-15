@@ -21,6 +21,7 @@ public class Test {
 
         AListTest(alistSong, songs);
         SLListTest(slSong,songs);
+        DLListTest(dlSong,songs);
 
     }
 
@@ -50,10 +51,10 @@ public class Test {
         list.removy(4);
         System.out.println(list.toString());
 
-        System.out.println("Removing at an index greater than size");
+        System.out.println("Attempt removing at an index greater than size");
         list.removy(6);
         System.out.println(list.toString());
-        System.out.println("Test done");
+        System.out.println("AList Test done");
     }
 
     public static void SLListTest(SLList list, Song[] songs){
@@ -83,11 +84,46 @@ public class Test {
         list.removy(3);
         System.out.println(list.toString());
 
-        System.out.println("Removing an element at an invalid position");
-        list.removy(6);
+        System.out.println("Attempt removing an element at an invalid position");
+        list.removy(3);
         System.out.println(list.toString());
 
-        System.out.println("Test Done");
+        System.out.println("SLList Test Done");
+    }
+
+    public static void DLListTest(DLList list, Song[] songs){
+
+        System.out.println("Initial elements in DLList(should be empty)");
+        System.out.println(list.toString());
+
+        System.out.println("Adding elements to the list");
+        for(Song s:songs){
+            list.addy(s);
+        }
+        System.out.println(list.toString());
+
+        System.out.println("Adding a duplicate element(allowed)");
+        list.addy(songs[0]);
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element that is not the head(position 1)");
+        list.removy(1);
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element at the end of the list");
+        list.removy(4);
+        System.out.println(list.toString());
+
+        System.out.println("Removing the head");
+        list.removy(0);
+        System.out.println(list.toString());
+
+        System.out.println("Attempting to remove an invalid position");
+        list.removy(3);
+        System.out.println(list.toString());
+
+        System.out.println("DLList Test Done");
+
     }
 
 }
