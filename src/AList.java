@@ -31,7 +31,7 @@ public class AList {
 
     public void removy(int pos){
         //Checks to see if the entered index is a valid index
-        if(pos <size-1 && pos >=0){
+        if(pos <size && pos >=0){
             for(int i=pos;i<size-1;i++){
                 ABList[i] = ABList[i+1];
             }
