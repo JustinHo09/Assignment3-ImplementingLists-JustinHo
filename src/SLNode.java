@@ -1,14 +1,14 @@
 public class SLNode <T> {
 
     T data;
-    SLNode next;
+    SLNode<T> next;
 
     public SLNode(){
         data= null;
         next=null;
     }
 
-    public SLNode getNext(){
+    public SLNode<T> getNext(){
         return next;
     }
 
@@ -16,7 +16,7 @@ public class SLNode <T> {
         return data;
     }
 
-    public void setNext(SLNode newNext){
+    public void setNext(SLNode<T> newNext){
         next = newNext;
     }
 
