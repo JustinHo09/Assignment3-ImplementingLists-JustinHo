@@ -29,6 +29,11 @@ public class Test {
 
         System.out.println("Initial elements in AList (Should be empty)");
         System.out.println(list.toString());
+
+        System.out.println("Removing an element from an empty list");
+        list.removy(0);
+        System.out.println(list.toString());
+
         System.out.println("Adding elements to reach max (4)");
         for(int i=0; i<4;i++){
             list.addy(songs[i]);
@@ -60,6 +65,10 @@ public class Test {
     public static void SLListTest(SLList list, Song[] songs){
 
         System.out.println("Initial elements in SLList (Should be empty)");
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element from an empty list");
+        list.removy(0);
         System.out.println(list.toString());
 
         System.out.println("Adding elements to the list");
@@ -94,6 +103,10 @@ public class Test {
     public static void DLListTest(DLList list, Song[] songs){
 
         System.out.println("Initial elements in DLList(should be empty)");
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element from an empty list");
+        list.removy(0);
         System.out.println(list.toString());
 
         System.out.println("Adding elements to the list");
