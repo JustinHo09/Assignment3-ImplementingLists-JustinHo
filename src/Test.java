@@ -20,6 +20,7 @@ public class Test {
         songs[4] = song5;
 
         AListTest(alistSong, songs);
+        SLListTest(slSong,songs);
 
     }
 
@@ -27,7 +28,7 @@ public class Test {
 
         System.out.println("Initial elements in AList (Should be empty)");
         System.out.println(list.toString());
-        System.out.println("Now adding 4 elements(max)");
+        System.out.println("Adding elements to reach max (4)");
         for(int i=0; i<4;i++){
             list.addy(songs[i]);
         }
@@ -55,5 +56,38 @@ public class Test {
         System.out.println("Test done");
     }
 
+    public static void SLListTest(SLList list, Song[] songs){
+
+        System.out.println("Initial elements in SLList (Should be empty)");
+        System.out.println(list.toString());
+
+        System.out.println("Adding elements to the list");
+        for(Song s: songs){
+            list.addy(s);
+        }
+        System.out.println(list.toString());
+
+        System.out.println("Adding a duplicate element(allowed)");
+        list.addy(songs[0]);
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element that is not the head(position 1)");
+        list.removy(1);
+        System.out.println(list.toString());
+
+        System.out.println("Removing the head");
+        list.removy(0);
+        System.out.println(list.toString());
+
+        System.out.println("Removing the last element");
+        list.removy(3);
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element at an invalid position");
+        list.removy(6);
+        System.out.println(list.toString());
+
+        System.out.println("Test Done");
+    }
 
 }
