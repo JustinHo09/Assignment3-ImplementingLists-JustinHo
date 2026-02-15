@@ -20,6 +20,10 @@ public class SLList {
         }
     }
     public void removy(int pos){
+        if(head == null){
+            System.out.println("Cannot remove from an empty list");
+            return;
+        }
         SLNode current=head;
         if(pos >0){
             int counter=0;
