@@ -19,9 +19,41 @@ public class Test {
         songs[3] = song4;
         songs[4] = song5;
 
+        AListTest(alistSong, songs);
+
     }
 
-    
+    public static void AListTest(AList list, Song[] songs){
+
+        System.out.println("Initial elements in AList (Should be empty)");
+        System.out.println(list.toString());
+        System.out.println("Now adding 4 elements(max)");
+        for(int i=0; i<4;i++){
+            list.addy(songs[i]);
+        }
+        System.out.println(list.toString());
+
+        System.out.println("Adding an element after max");
+        list.addy(songs[4]);
+        System.out.println(list.toString());
+
+        System.out.println("Adding a duplicate(should be allowed)");
+        list.addy(songs[0]);
+        System.out.println(list.toString());
+
+        System.out.println("Removing element at index 1");
+        list.removy(1);
+        System.out.println(list.toString());
+
+        System.out.println("Removing an element at the end");
+        list.removy(4);
+        System.out.println(list.toString());
+
+        System.out.println("Removing at an index greater than size");
+        list.removy(6);
+        System.out.println(list.toString());
+        System.out.println("Test done");
+    }
 
 
 }
