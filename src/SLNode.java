@@ -1,6 +1,6 @@
-public class SLNode {
+public class SLNode <T> {
 
-    Song data;
+    T data;
     SLNode next;
 
     public SLNode(){
@@ -12,7 +12,7 @@ public class SLNode {
         return next;
     }
 
-    public Song getData(){
+    public T getData(){
         return data;
     }
 
@@ -20,8 +20,8 @@ public class SLNode {
         next = newNext;
     }
 
-    public void setData(Song newSong){
-        data = newSong;
+    public void setData(T newData){
+        data = newData;
     }
 
 }
