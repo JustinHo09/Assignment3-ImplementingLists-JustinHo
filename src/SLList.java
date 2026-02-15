@@ -27,9 +27,9 @@ public class SLList {
                 current = current.getNext();
                 counter++;
             }
-            if(current == null){
+            if(current == null || current.getNext() == null){
                 System.out.println("No node exists at that position");
-            }else {
+            }else if(current.getNext() != null){
                 current.setNext(current.getNext().getNext());
             }
         } else if( pos == 0){
