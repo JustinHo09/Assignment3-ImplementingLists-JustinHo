@@ -1,8 +1,8 @@
-public class DLNode {
+public class DLNode <T>{
 
     DLNode previous;
     DLNode next;
-    Song data;
+    T data;
 
     public DLNode(){
         previous=null;
@@ -18,7 +18,7 @@ public class DLNode {
         return next;
     }
 
-    public Song getData(){
+    public T getData(){
         return data;
     }
 
@@ -30,7 +30,7 @@ public class DLNode {
         next = newNext;
     }
 
-    public void setData(Song newData){
+    public void setData(T newData){
         data = newData;
     }
 
