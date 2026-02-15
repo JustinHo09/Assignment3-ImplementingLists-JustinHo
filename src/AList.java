@@ -29,6 +29,10 @@ public class AList <T> {
     }
 
     public void removy(int pos){
+        if(size ==0){
+            System.out.println("Cannot remove from an empty list.");
+            return;
+        }
         //Checks to see if the entered index is a valid index
         if(pos <size && pos >=0){
             for(int i=pos;i<size-1;i++){
