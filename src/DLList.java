@@ -6,7 +6,7 @@ public class DLList {
         head=null;
     }
 
-    public void addy(Song s){
+    public <T> void addy(T s){
         DLNode node = new DLNode();
         node.setData(s);
         if(head == null){
