@@ -1,28 +1,27 @@
-public class AList {
+public class AList <T> {
 
     public int size;
     public int maxSize;
-    public Song[] ABList;
+    public T[] ABList;
 
     public AList(){
         size = 0;
         maxSize = 4;
-        ABList = new Song[maxSize];
+        ABList =  (T[])(new Object[maxSize]);
     }
 
-    public void addy(Song p){
+    public void addy(T p){
         if(size == maxSize){
             ABList = resize(ABList);
-
         }
         ABList[size] = p;
         size++;
 
     }
 
-    public Song[] resize(Song[] original){
+    public T[] resize(T[] original){
         maxSize= maxSize*2;
-        Song[] resizedList = new Song[maxSize];
+        T[] resizedList = (T[]) (new Object[maxSize]);
         for(int i = 0; i<original.length;i++){
             resizedList[i] = original[i];
         }
