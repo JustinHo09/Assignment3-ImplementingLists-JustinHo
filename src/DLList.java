@@ -22,6 +22,10 @@ public class DLList {
     }
 
     public void removy(int pos){
+        if(head == null){
+            System.out.println("Cannot remove from an empty list");
+            return;
+        }
         DLNode current = head;
         if(pos < 0){
             System.out.println("Not a valid position in the list");
