@@ -1,18 +1,18 @@
-public class DLList {
+public class DLList <T> {
 
-    DLNode head;
+    DLNode<T> head;
 
     public DLList(){
         head=null;
     }
 
-    public <T> void addy(T s){
-        DLNode node = new DLNode();
+    public void addy(T s){
+        DLNode<T> node = new DLNode<T>();
         node.setData(s);
         if(head == null){
             head = node;
         }else{
-            DLNode current = head;
+            DLNode<T> current = head;
             while(current.getNext() != null){
                 current = current.getNext();
             }
@@ -26,7 +26,7 @@ public class DLList {
             System.out.println("Cannot remove from an empty list");
             return;
         }
-        DLNode current = head;
+        DLNode<T> current = head;
         if(pos < 0){
             System.out.println("Not a valid position in the list");
         }else if( pos == 0){
@@ -58,7 +58,7 @@ public class DLList {
 
     public String toString(){
         String output="";
-        DLNode current=head;
+        DLNode<T> current=head;
         while(current!=null){
             output = output+ current.getData().toString()+" \n";
             current= current.getNext();
