@@ -1,18 +1,18 @@
-public class SLList {
+public class SLList<T> {
 
-    public SLNode head;
+    public SLNode<T> head;
 
     public SLList(){
         head=null;
     }
 
-    public <T> void addy(T s){
-        SLNode test = new SLNode();
+    public void addy(T s){
+        SLNode<T> test = new SLNode<T>();
         test.setData(s);
         if(head == null){
             head = test;
         }else{
-            SLNode current = head;
+            SLNode<T> current = head;
             while(current.getNext() != null){
                 current= current.getNext();
             }
@@ -24,7 +24,7 @@ public class SLList {
             System.out.println("Cannot remove from an empty list");
             return;
         }
-        SLNode current=head;
+        SLNode<T> current=head;
         if(pos >0){
             int counter=0;
             while(counter != pos-1 && current != null){
@@ -45,7 +45,7 @@ public class SLList {
     }
 
     public String toString(){
-        SLNode current = head;
+        SLNode<T> current = head;
         String output= "";
         while(current!= null){
             output = output + current.getData().toString()+"\n";
