@@ -19,13 +19,17 @@ public class Test {
         songs[3] = song4;
         songs[4] = song5;
 
+
         AListTest(alistSong, songs);
+
         SLListTest(slSong,songs);
+
         DLListTest(dlSong,songs);
 
     }
 
     public static void AListTest(AList list, Song[] songs){
+        System.out.println("Now Testing AList");
 
         System.out.println("Initial elements in AList (Should be empty)");
         System.out.println(list.toString());
@@ -60,9 +64,11 @@ public class Test {
         list.removy(6);
         System.out.println(list.toString());
         System.out.println("AList Test done");
+        System.out.println();
     }
 
     public static void SLListTest(SLList list, Song[] songs){
+        System.out.println("Now Testing SLList");
 
         System.out.println("Initial elements in SLList (Should be empty)");
         System.out.println(list.toString());
@@ -98,9 +104,11 @@ public class Test {
         System.out.println(list.toString());
 
         System.out.println("SLList Test Done");
+        System.out.println();
     }
 
     public static void DLListTest(DLList list, Song[] songs){
+        System.out.println("Now Testing DLList");
 
         System.out.println("Initial elements in DLList(should be empty)");
         System.out.println(list.toString());
@@ -136,6 +144,7 @@ public class Test {
         System.out.println(list.toString());
 
         System.out.println("DLList Test Done");
+        System.out.println();
 
     }
 
