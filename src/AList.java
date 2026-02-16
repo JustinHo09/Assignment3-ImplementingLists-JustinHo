@@ -1,15 +1,31 @@
+/**
+ * This Class is used to implement a listed with an array
+ * making it an array based list. It also uses generics
+ * so it can take in any object.
+ * @param <T> The generic to use across the class.
+ */
 public class AList <T> {
 
     public int size;
     public int maxSize;
     public T[] ABList;
 
+    /**
+     * This is the constructor for AList, and it sets size to 0
+     * max to 4 and makes an array of maxSize.
+     */
     public AList(){
         size = 0;
         maxSize = 4;
         ABList =  (T[])(new Object[maxSize]);
     }
 
+    /**
+     * This adds an element at the end of the list, updating size
+     * by one and then resizes if needed.
+     *
+     * @param p The object to add to the list.
+     */
     public void addy(T p){
         if(size == maxSize){
             ABList = resize(ABList);
@@ -19,6 +35,12 @@ public class AList <T> {
 
     }
 
+    /**
+     * This method resizes the array.
+     *
+     * @param original The array to resize.
+     * @return The resized array.
+     */
     public T[] resize(T[] original){
         maxSize= maxSize*2;
         T[] resizedList = (T[]) (new Object[maxSize]);
@@ -28,6 +50,11 @@ public class AList <T> {
         return resizedList;
     }
 
+    /**
+     * This removes an element at the specified index.
+     *
+     * @param pos The index of the element to be removed.
+     */
     public void removy(int pos){
         if(size ==0){
             System.out.println("Cannot remove from an empty list.");
@@ -44,6 +71,12 @@ public class AList <T> {
         }
     }
 
+    /**
+     * This makes one string with all information from the elements in the list.
+     *
+     * @return A string with all of the information from all of the elements in the
+     * list.
+     */
     public String toString(){
         String output="";
         for(int i=0; i<size; i++){
