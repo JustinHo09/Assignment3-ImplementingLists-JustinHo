@@ -5,7 +5,7 @@
  */
 public class DLList <T> {
 
-    DLNode<T> head;
+    public DLNode<T> head;
 
     /**
      * This contractor initializes the head to null.
@@ -78,7 +78,7 @@ public class DLList <T> {
             if(current == null){
 
                 System.out.println("Not a valid position in the list");
-                
+
             }else{
 
                 current.getPrevious().setNext(current.getNext());
