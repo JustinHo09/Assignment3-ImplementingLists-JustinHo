@@ -4,9 +4,9 @@
  */
 public class DLNode <T>{
 
-    DLNode <T> previous;
-    DLNode <T> next;
-    T data;
+    public DLNode <T> previous;
+    public DLNode <T> next;
+    public T data;
 
     /**
      * This creates a node an initializes all of its values ot null.
