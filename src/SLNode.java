@@ -5,8 +5,8 @@
  */
 public class SLNode <T> {
 
-    T data;
-    SLNode<T> next;
+    public T data;
+    public SLNode<T> next;
 
     /**
      * This constructor iniitilizes the data and next value of the node to null.
