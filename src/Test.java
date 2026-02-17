@@ -137,7 +137,7 @@ public class Test {
         list.removy(4);
         System.out.println(list.toString());
 
-        System.out.println("Attempt removing an element at an invalid position:");
+        System.out.println("Attempt removing an element at an invalid position(4):");
         list.removy(4);
         System.out.println(list.toString());
 
@@ -190,7 +190,7 @@ public class Test {
         list.removy(0);
         System.out.println(list.toString());
 
-        System.out.println("Attempting to remove an invalid position:");
+        System.out.println("Attempting to remove an invalid position(4):");
         list.removy(4);
         System.out.println(list.toString());
 
